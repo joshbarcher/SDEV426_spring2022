@@ -12,13 +12,16 @@ public class TestObserverPattern
         Reporter clark = new Reporter("Clark Kent", "Daily Planet");
         Rocket elonRocket = new Rocket("Elon 123", "Orbit");
 
-        elonRocket.notifyObservers();
+        //elonRocket.notifyObservers();
 
         //attached them together
         elonRocket.addObserver(james);
         elonRocket.addObserver(clark);
 
+        //make a change, see if the observers notice!
         elonRocket.changeAltitude(2);
+        elonRocket.changeAltitude(3);
+        elonRocket.changeAltitude(4);
     }
 }
 

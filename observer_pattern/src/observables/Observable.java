@@ -33,7 +33,7 @@ public abstract class Observable
     }
 
     //let observers know that the observable "did something"
-    public void notifyObservers()
+    protected void notifyObservers()
     {
         //loop over all observers
         for (IObserver observer : observers)
@@ -42,7 +42,7 @@ public abstract class Observable
         }
     }
 
-    public void notifyObservers(Object... args)
+    protected void notifyObservers(Object... args)
     {
         //loop over all observers
         for (IObserver observer : observers)
